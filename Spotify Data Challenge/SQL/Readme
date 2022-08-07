@@ -11,6 +11,72 @@
 -- 3. Which song attributes are most strongly correlated? What attributes seem to have very little correlation?
 -- 4. Which attributes have the most variability? Which tend to be the most similar among the Top 100 songs?
 
+![Screenshot 2022-08-06 214751](https://user-images.githubusercontent.com/94116857/183286580-c1ef8afa-39d1-4550-b4ef-b16b7ca5d749.png)
+
+```
+-- drop database spotify_top_100;  -- Drop Datbase if exist
+
+-- Creating Database 
+Create database spotify_top_100;
+
+USE spotify_top_100;
+
+-- Create Table
+SHOW SESSION VARIABLES LIKE 'lower_case_table_names';
+SHOW DATABASES;
+
+
+SHOW TABLES FROM `spotify_top_100` like 'spotify';
+
+CREATE TABLE `spotify_top_100`.`spotify` (
+    `id` TEXT,
+    `name` TEXT,
+    `artists` TEXT,
+    `danceability` DOUBLE,
+    `energy` DOUBLE,
+    `key` DOUBLE,
+    `loudness` DOUBLE,
+    `mode` DOUBLE,
+    `speechiness` DOUBLE,
+    `acousticness` DOUBLE,
+    `instrumentalness` DOUBLE,
+    `liveness` DOUBLE,
+    `valence` DOUBLE,
+    `tempo` DOUBLE,
+    `duration_ms` DOUBLE,
+    `time_signature` DOUBLE
+);
+
+Select * From spotify;
+
+
+
+SHOW COLUMNS FROM `spotify_top_100`.`spotify`;
+-- TRUNCATE TABLE `spotify_top_100`.`spotify`;
+-- PREPARE stmt FROM 'INSERT INTO `spotify_top_100`.`spotify` (`id`,`name`,`artists`,`danceability`,`energy`,`key`,`loudness`,`mode`,`speechiness`,`acousticness`,`instrumentalness`,`liveness`,`valence`,`tempo`,`duration_ms`,`time_signature`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+-- DEALLOCATE PREPARE stmt;
+Select * From spotify;
+
+describe spotify;
+
+
+-- Data Analysis
+-- 1. Which artists had the most Top 100 songs?
+
+SELECT 
+    artists, COUNT(id)
+FROM
+    spotify
+GROUP BY artists
+ORDER BY COUNT(id) DESC
+LIMIT 5;
+
+-- THUS, XXXTENTACION HAS 6 SONGS IN TOP 100 IN 2018
+
+
+```
+
+![Query 1](https://user-images.githubusercontent.com/94116857/183286511-055797e2-88f6-4b53-bab2-14509d12a1a0.png)
 
 
 
