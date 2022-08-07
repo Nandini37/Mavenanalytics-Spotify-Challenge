@@ -12,7 +12,7 @@
 -- 4. Which attributes have the most variability? Which tend to be the most similar among the Top 100 songs?
 
 <picture>
-![Screenshot 2022-08-06 214751](https://user-images.githubusercontent.com/94116857/183286580-c1ef8afa-39d1-4550-b4ef-b16b7ca5d749.png)
+srcset="https://user-images.githubusercontent.com/94116857/183286580-c1ef8afa-39d1-4550-b4ef-b16b7ca5d749.png"
 </picture>
 ```
 -- drop database spotify_top_100;  -- Drop Datbase if exist
