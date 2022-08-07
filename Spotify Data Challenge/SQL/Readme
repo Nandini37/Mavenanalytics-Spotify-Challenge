@@ -1,2 +1,16 @@
-<H3> Maven Analytics</H3>
+# Maven Analytics - Spotify Data Challenge
+
+-- In this projecct we are going to analyze Spotify Top 100 songs in 2018.
+-- It is based on Spotify streaming data, including name, artist 
+-- and key attributes (danceability, energy, loudness, mode, speechiness, acousticness, etc) 
+
+
+-- Recommended Analysis
+-- 1. Which artists had the most Top 100 songs?
+-- 2. Are there more artists in the Top 100 with 'Lil' in their name, or with 'DJ' in their name?
+-- 3. Which song attributes are most strongly correlated? What attributes seem to have very little correlation?
+-- 4. Which attributes have the most variability? Which tend to be the most similar among the Top 100 songs?
+
+
+
 
